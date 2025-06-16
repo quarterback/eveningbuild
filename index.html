@@ -10,11 +10,12 @@
             theme: {
                 extend: {
                     colors: {
-                        'whalers-green': '#00843D',
-                        'whalers-purple': '#6B46C1',
-                        'whalers-gray': '#374151',
-                        'evening-blue': '#4C1D95',
-                        'soft-green': '#10B981'
+                        'electric-blue': '#0EA5E9',
+                        'hot-pink': '#EC4899',
+                        'lime-green': '#65A30D',
+                        'sunset-orange': '#F97316',
+                        'deep-purple': '#7C3AED',
+                        'bright-yellow': '#FDE047'
                     },
                     fontFamily: {
                         'mono': ['Monaco', 'Menlo', 'Ubuntu Mono', 'monospace'],
@@ -25,144 +26,135 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
         
-        .retro-grid {
-            background-image: 
-                linear-gradient(rgba(107, 70, 193, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(107, 70, 193, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
+        .gradient-bg {
+            background: linear-gradient(135deg, #0EA5E9, #EC4899, #7C3AED);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
         
-        .gradient-text {
-            background: linear-gradient(135deg, #00843D, #6B46C1);
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .text-rainbow {
+            background: linear-gradient(45deg, #EC4899, #F97316, #FDE047, #65A30D, #0EA5E9, #7C3AED);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: rainbow 8s ease infinite;
+        }
+        
+        @keyframes rainbow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .donut-shadow {
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
         }
     </style>
 </head>
-<body class="bg-gray-50 retro-grid min-h-screen">
-    <div class="max-w-4xl mx-auto px-4 py-8 sm:py-16">
+<body class="bg-gray-900 text-white min-h-screen">
+    
+    <!-- Animated gradient header -->
+    <div class="gradient-bg h-4"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 py-12">
         
-        <!-- Header -->
+        <!-- Hero -->
         <header class="text-center mb-16">
-            <h1 class="text-6xl sm:text-7xl font-bold gradient-text mb-4 font-mono tracking-tight">
+            <h1 class="text-7xl sm:text-8xl font-black text-rainbow mb-6 font-mono tracking-tight">
                 Evening Build
             </h1>
-            <p class="text-xl sm:text-2xl text-whalers-gray font-medium max-w-2xl mx-auto leading-relaxed">
-                Contemplating the relationship between community, technology, and repair
-            </p>
+            <div class="text-2xl sm:text-3xl text-gray-300 font-medium max-w-3xl mx-auto leading-relaxed mb-8">
+                A platform for gatherings about 
+                <span class="text-hot-pink font-bold">community</span>, 
+                <span class="text-electric-blue font-bold">technology</span>, and the 
+                <span class="text-lime-green font-bold">future we're already living in</span>
+            </div>
+            <div class="text-6xl">🍩</div>
         </header>
 
-        <!-- Main Content -->
-        <main class="space-y-16">
+        <!-- Manifesto -->
+        <main class="space-y-12">
             
-            <!-- What This Is -->
-            <section class="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-l-8 border-whalers-green">
-                <h2 class="text-3xl font-bold text-whalers-gray mb-6">What This Is</h2>
-                <div class="prose prose-lg max-w-none text-gray-700 space-y-4">
-                    <p>
-                        Evening Build is about contemplating the relationship between community, technology, and repair. We gather monthly to ask: Is it possible to fix what's been wrought onto us?
+            <section class="bg-gray-800 rounded-2xl p-8 sm:p-12 donut-shadow">
+                <div class="prose prose-xl prose-invert max-w-none space-y-6 text-gray-200 leading-relaxed">
+                    <p class="text-2xl text-white font-medium">
+                        We let Airbnb run roughshod over our neighborhoods. Ridesharing is embedded in our lives in ways we couldn't have imagined. Amazon trucks block traffic on roadways.
                     </p>
+                    
                     <p>
-                        This isn't a networking event or a masterclass. It's more like a themed group chat that brings the right mix of people into rooms at the right times—then lets the magic happen in the margins. Some months we'll discuss a book. Other times we'll invite a guest or just share a meal together.
+                        Nobody pays taxes on any of this. We just get to own the externalities. We're all complicit because we use these services—partially because it's easier, partially because we're all trying to carve out minor amounts of joy in a world that's more atomized than ever.
                     </p>
+                    
                     <p>
-                        If you worry about algorithms deciding vulnerable people's healthcare, if you've watched tech reshape your neighborhood without your input, if you think we need to look both ways before crossing rather than writing off harm as collateral damage—this might be for you.
+                        <span class="text-hot-pink font-semibold">Evening Build</span> is about creating spaces where we can think together about repair, maintenance, and what it means to look both ways before we cross rather than writing off harm as collateral damage.
+                    </p>
+                    
+                    <p>
+                        We're not building software. We're building <span class="text-lime-green font-semibold">nodes in our community</span>. You probably won't leave with a best friend, but you might meet someone you didn't know before. Maybe you'll see them again and it'll be warm because you'll remember they worry about the same things you do.
                     </p>
                 </div>
             </section>
 
-            <!-- What We Want to Do -->
-            <section class="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-l-8 border-whalers-purple">
-                <h2 class="text-3xl font-bold text-whalers-gray mb-6">What We Want to Do</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-semibold text-evening-blue">Build Community Nodes</h3>
-                        <p class="text-gray-700">
-                            We're not building software. We're building connections between people who care about consequences, sustainability, and repair in our technical systems.
-                        </p>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-semibold text-evening-blue">Create Space for Repair</h3>
-                        <p class="text-gray-700">
-                            Moving beyond "move fast and break things" toward maintenance, thoughtfulness, and looking both ways before we cross.
-                        </p>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-semibold text-evening-blue">Foster Real Conversation</h3>
-                        <p class="text-gray-700">
-                            Bringing together people who worry about algorithmic healthcare decisions AND have pet chinchillas named Douglass.
-                        </p>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-semibold text-evening-blue">Practice Community Care</h3>
-                        <p class="text-gray-700">
-                            Engaging with our neighbors as humans, not faces we can sell stuff to. Learning from Nordic approaches to civic engagement.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Format -->
-            <section class="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-l-8 border-soft-green">
-                <h2 class="text-3xl font-bold text-whalers-gray mb-6">The Format</h2>
-                <div class="text-gray-700 space-y-4">
-                    <p>
-                        Evening Build adapts to what the moment needs. Sometimes we'll examine a book together. Other times we'll have a guest share their work. Maybe we'll try a workshop or simply share a meal and see what emerges.
+            <!-- What Evening Build Presents -->
+            <section class="grid md:grid-cols-3 gap-8">
+                <div class="bg-hot-pink bg-opacity-20 border border-hot-pink rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-hot-pink mb-3">Reading Groups</h3>
+                    <p class="text-gray-300">
+                        Books that help us think about consequences, infrastructure, and who our systems serve
                     </p>
-                    <p>
-                        Food is nearby, music stays low, and the real conversations happen in the margins. We're committing to three initial events to see if this resonates.
+                </div>
+                
+                <div class="bg-electric-blue bg-opacity-20 border border-electric-blue rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">Dinner Parties</h3>
+                    <p class="text-gray-300">
+                        Shared meals where the conversation happens in the margins
                     </p>
-                    <div class="bg-gray-50 p-6 rounded-lg mt-6">
-                        <p class="font-medium text-whalers-gray">
-                            You probably won't leave with a best friend, but you might meet someone you didn't know before. Maybe you'll see them again and it'll be warm because you'll remember they worry about the same things you do.
-                        </p>
-                    </div>
+                </div>
+                
+                <div class="bg-lime-green bg-opacity-20 border border-lime-green rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-lime-green mb-3">Donut Gatherings</h3>
+                    <p class="text-gray-300">
+                        Because sometimes the best conversations happen over snacks
+                    </p>
                 </div>
             </section>
 
-            <!-- Events Section (Initially Hidden) -->
-            <!-- 
-            <section class="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-l-8 border-evening-blue">
-                <h2 class="text-3xl font-bold text-whalers-gray mb-6">Upcoming Events</h2>
-                <div class="space-y-6">
-                    <div class="border-l-4 border-whalers-green pl-6">
-                        <h3 class="text-xl font-semibold text-evening-blue mb-2">Evening Build #1</h3>
-                        <p class="text-gray-600 mb-2">Date • Time • Location</p>
-                        <p class="text-gray-700">Description of first event...</p>
-                        <a href="#" class="inline-block mt-3 bg-whalers-green text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                            RSVP
-                        </a>
-                    </div>
-                </div>
-            </section>
-            -->
-
-            <!-- Contact/Updates -->
-            <section class="text-center bg-whalers-gray text-white rounded-lg p-8 sm:p-12">
-                <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
-                <p class="text-xl mb-6 text-gray-200">
-                    We'll announce our first event soon. For now, this is an experiment in building something worth showing up for.
+            <!-- Call to Action -->
+            <section class="text-center bg-gradient-to-r from-deep-purple to-hot-pink rounded-2xl p-12">
+                <h2 class="text-4xl font-bold mb-6">Ready to Build Something?</h2>
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                    We're starting with <span class="font-bold text-bright-yellow">Donuts From The Future</span> — a gathering about what we're building toward, and what we want to preserve along the way.
                 </p>
                 <div class="space-y-4">
-                    <p class="text-gray-300">
-                        Questions? Ideas? Want to help organize?
-                    </p>
-                    <p class="text-lg">
-                        Email: <a href="mailto:hello@eveningbuild.com" class="text-soft-green hover:underline">hello@eveningbuild.com</a>
-                    </p>
+                    <div class="text-lg text-gray-300">
+                        Want to know when we launch the first event?
+                    </div>
+                    <a href="mailto:hello@eveningbuild.com" class="inline-block bg-bright-yellow text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-colors">
+                        Get Updates
+                    </a>
                 </div>
+            </section>
+
+            <!-- Footer Note -->
+            <section class="text-center text-gray-400 text-lg">
+                <p>
+                    Portland, OR • An experiment in building something worth showing up for
+                </p>
             </section>
 
         </main>
-
-        <!-- Footer -->
-        <footer class="mt-16 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 Evening Build • Portland, OR</p>
-        </footer>
-
     </div>
+    
+    <!-- Bottom gradient -->
+    <div class="gradient-bg h-4 mt-16"></div>
+    
 </body>
 </html>
