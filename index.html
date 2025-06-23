@@ -1,168 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evening Build</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'electric-blue': '#0EA5E9',
-                        'hot-pink': '#EC4899',
-                        'lime-green': '#65A30D',
-                        'sunset-orange': '#F97316',
-                        'deep-purple': '#7C3AED',
-                        'bright-yellow': '#FDE047'
-                    },
-                    fontFamily: {
-                        'mono': ['Monaco', 'Menlo', 'Ubuntu Mono', 'monospace'],
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evening Build</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'electric-blue': '#0EA5E9',
+            'hot-pink': '#EC4899',
+            'lime-green': '#65A30D',
+            'sunset-orange': '#F97316',
+            'deep-purple': '#7C3AED',
+            'bright-yellow': '#FDE047'
+          },
+          fontFamily: {
+            'mono': ['Monaco', 'Menlo', 'Ubuntu Mono', 'monospace'],
+            'sans': ['Inter', 'system-ui', 'sans-serif']
+          }
         }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #0EA5E9, #EC4899, #7C3AED);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
-        
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .text-rainbow {
-            background: linear-gradient(45deg, #EC4899, #F97316, #FDE047, #65A30D, #0EA5E9, #7C3AED);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: rainbow 8s ease infinite;
-        }
-        
-        @keyframes rainbow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        .donut-shadow {
-            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
-        }
-    </style>
+      }
+    };
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #0EA5E9, #EC4899, #7C3AED);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .text-rainbow {
+      background: linear-gradient(45deg, #EC4899, #F97316, #FDE047, #65A30D, #0EA5E9, #7C3AED);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: rainbow 8s ease infinite;
+    }
+
+    @keyframes rainbow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .donut-shadow {
+      box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen">
-    
-    <!-- Animated gradient header -->
-    <div class="gradient-bg h-4"></div>
-    
-    <div class="max-w-4xl mx-auto px-4 py-12">
-        
-        <!-- Hero -->
-        <header class="text-center mb-16">
-            <h1 class="text-7xl sm:text-8xl font-black text-rainbow mb-6 font-mono tracking-tight">
-                Evening Build
-            </h1>
-            <div class="text-2xl sm:text-3xl text-gray-300 font-medium max-w-3xl mx-auto leading-relaxed mb-8">
-                A platform for gatherings about 
-                <span class="text-hot-pink font-bold">community</span>, 
-                <span class="text-electric-blue font-bold">technology</span>, and the 
-                <span class="text-lime-green font-bold">future we're already living in</span>
-            </div>
-            <div class="text-6xl">🍩</div>
-        </header>
 
-        <!-- Manifesto -->
-        <main class="space-y-12">
-            
-            <section class="bg-gray-800 rounded-2xl p-8 sm:p-12 donut-shadow">
-<div class="prose prose-xl prose-invert max-w-none space-y-6 text-gray-200 leading-relaxed">
-  <p class="text-2xl text-white font-medium">
-    Most of the systems we live with weren't built to be fair or humane. They were built to work at scale and sort themselves out later. We're living in the later.
-  </p>
+  <div class="gradient-bg h-4"></div>
 
-  <p>
-    Evening Build is for people who work in and around tech and want to think more clearly about what we're doing. Designers, engineers, PMs, ops people, data folks, API tinkerers. People who care about how things get made and who they leave behind.
-  </p>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Hero -->
+    <header class="text-center mb-16">
+      <h1 class="text-7xl sm:text-8xl font-black text-rainbow mb-6 font-mono tracking-tight">
+        Evening Build
+      </h1>
+      <div class="text-2xl sm:text-3xl text-gray-300 font-medium max-w-3xl mx-auto leading-relaxed mb-8">
+        A recurring place for stories, collaboration, and shared memory.
+      </div>
+    </header>
 
-  <p>
-    It's also for anyone outside that bubble who still feels the impact. Whether you're trying to fix a login form for your neighbor or wondering why your bus never shows up on time, you're not imagining it. A lot of this stuff really is broken.
-  </p>
+    <!-- Manifesto -->
+    <main class="space-y-12">
+      <section class="bg-gray-800 rounded-2xl p-8 sm:p-12 donut-shadow">
+        <div class="prose prose-xl prose-invert max-w-none space-y-6 text-gray-200 leading-relaxed">
+          <p class="text-2xl text-white font-medium">
+            Most of the systems we live with weren't built to be fair or humane. They were built to scale—and left to sort themselves out later. We're living in the later.
+          </p>
 
-  <p>
-    If you're interested in what care looks like after the hype wears off, you're in the right place.
-  </p>
-</div>
+          <p>
+            Evening Build is for people who care about how things get made and who they leave behind. Designers, engineers, ops folks, API tinkerers—and anyone affected by broken systems, online or off.
+          </p>
 
-            </section>
+          <p>
+            Whether you're troubleshooting access for a neighbor or wondering why your bus never comes, you're not imagining it. Much of it really is broken.
+          </p>
 
-            <!-- What Evening Build Presents -->
-<section class="grid md:grid-cols-2 gap-8">
-  <div class="bg-deep-purple bg-opacity-20 border border-deep-purple rounded-xl p-6">
-    <h3 class="text-xl font-bold text-deep-purple mb-3">Pop-up Experiments</h3>
-    <p class="text-gray-300">
-      One-offs, pilots, and good ideas that only need to work once to be worth doing.
-    </p>
+          <p>
+            If you're curious about what care looks like after the hype, you're in the right place.
+          </p>
+        </div>
+      </section>
+
+      <!-- What Evening Build Presents -->
+      <section class="grid md:grid-cols-2 gap-8">
+        <div class="bg-deep-purple bg-opacity-20 border border-deep-purple rounded-xl p-6">
+          <h3 class="text-xl font-bold text-deep-purple mb-3">Pop-up Experiments</h3>
+          <p class="text-gray-300">
+            One-offs, pilots, and good ideas that only need to work once to matter.
+          </p>
+        </div>
+
+        <div class="bg-bright-yellow bg-opacity-20 border border-bright-yellow rounded-xl p-6">
+          <h3 class="text-xl font-bold text-bright-yellow mb-3">Curated Conversations</h3>
+          <p class="text-gray-300">
+            Prompt-led dialogue. Tangents welcome. Depth encouraged.
+          </p>
+        </div>
+
+        <div class="bg-hot-pink bg-opacity-20 border border-hot-pink rounded-xl p-6">
+          <h3 class="text-xl font-bold text-hot-pink mb-3">What You Want to Do</h3>
+          <p class="text-gray-300">
+            Book nights. Weird lectures. Collaborations that don’t feel like work.
+          </p>
+        </div>
+
+        <div class="bg-electric-blue bg-opacity-20 border border-electric-blue rounded-xl p-6">
+          <h3 class="text-xl font-bold text-electric-blue mb-3">Gatherings That Stick</h3>
+          <p class="text-gray-300">
+            Supper clubs, salons, shared tables. Something to come back to.
+          </p>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="text-center bg-gradient-to-r from-deep-purple to-hot-pink rounded-2xl p-12">
+        <h2 class="text-4xl font-bold mb-6">Want to be part of the first one?</h2>
+        <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          We’re starting with a small gathering in Portland—food, conversation, maybe even music. You’ll know when we know.
+        </p>
+        <a href="mailto:hello@eveningbuild.com" class="inline-block bg-bright-yellow text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-colors">
+          Get Updates
+        </a>
+      </section>
+
+      <!-- Footer Note -->
+      <section class="text-center text-gray-400 text-lg">
+        <p>
+          Portland, OR • An experiment in building something worth showing up for
+        </p>
+      </section>
+    </main>
   </div>
 
-  <div class="bg-bright-yellow bg-opacity-20 border border-bright-yellow rounded-xl p-6">
-    <h3 class="text-xl font-bold text-bright-yellow mb-3">Curated Conversations</h3>
-    <p class="text-gray-300">
-      Themed provocations. Prompt-led group chats where the tangents matter most.
-    </p>
-  </div>
-
-  <div class="bg-hot-pink bg-opacity-20 border border-hot-pink rounded-xl p-6">
-    <h3 class="text-xl font-bold text-hot-pink mb-3">Stuff you wanna do</h3>
-    <p class="text-gray-300">
-      Book nights. Collabs. Speakers that don't bore you.
-    </p>
-  </div>
-
-  <div class="bg-electric-blue bg-opacity-20 border border-electric-blue rounded-xl p-6">
-    <h3 class="text-xl font-bold text-electric-blue mb-3">Convenings & Gatherings</h3>
-    <p class="text-gray-300">
-     The idea is to connect the pieces, together. Over food and drink. Donuts, too. 
-    </p>
-  </div>
-</section>
-
-            <!-- Call to Action 
-            <section class="text-center bg-gradient-to-r from-deep-purple to-hot-pink rounded-2xl p-12">
-                <h2 class="text-4xl font-bold mb-6">Ready to Build Something?</h2>
-                <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                    We're starting with <span class="font-bold text-bright-yellow">Donuts From The Future</span> — a gathering about what we're building toward, and what we want to preserve along the way.
-                </p>
-                <div class="space-y-4">
-                    <div class="text-lg text-gray-300">
-                        Want to know when we launch the first event?
-                    </div> -->
-                    <a href="mailto:hello@eveningbuild.com" class="inline-block bg-bright-yellow text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-colors">
-                        Get Updates
-                    </a>
-                </div>
-            </section> 
-
-            <!-- Footer Note -->
-            <section class="text-center text-gray-400 text-lg">
-                <p>
-                    Portland, OR • An experiment in building something worth showing up for
-                </p>
-            </section>
-
-        </main>
-    </div>
-    
-    <!-- Bottom gradient -->
-    <div class="gradient-bg h-4 mt-16"></div>
-    
+  <div class="gradient-bg h-4 mt-16"></div>
 </body>
 </html>
