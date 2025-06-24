@@ -3,150 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Evening Build is a dinner club for people building things—projects, careers, habits, worlds. It’s a space for meaningful conversation, shared meals, and thoughtful company." />
   <title>Evening Build</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'electric-blue': '#0EA5E9',
-            'hot-pink': '#EC4899',
-            'lime-green': '#65A30D',
-            'sunset-orange': '#F97316',
-            'deep-purple': '#7C3AED',
-            'bright-yellow': '#FDE047'
-          },
-          fontFamily: {
-            'mono': ['Monaco', 'Menlo', 'Ubuntu Mono', 'monospace'],
-            'sans': ['Inter', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-    .gradient-bg {
-      background: linear-gradient(135deg, #0EA5E9, #EC4899, #7C3AED);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-    }
-
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .text-rainbow {
-      background: linear-gradient(45deg, #EC4899, #F97316, #FDE047, #65A30D, #0EA5E9, #7C3AED);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: rainbow 8s ease infinite;
-    }
-
-    @keyframes rainbow {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    .donut-shadow {
-      box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
-    }
-  </style>
+  
+  <!-- Shoelace CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Shoelace JS -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
 </head>
-<body class="bg-gray-900 text-white min-h-screen">
-
-  <div class="gradient-bg h-4"></div>
-
-  <div class="max-w-4xl mx-auto px-4 py-12">
-    <!-- Hero -->
-    <header class="text-center mb-16">
-      <h1 class="text-7xl sm:text-8xl font-black text-rainbow mb-6 font-mono tracking-tight">
-        Evening Build
-      </h1>
-      <div class="text-2xl sm:text-3xl text-gray-300 font-medium max-w-3xl mx-auto leading-relaxed mb-8">
-        A recurring place for stories, collaboration, and shared memory.
-      </div>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="title">Evening Build</h1>
+      <p class="subtitle">
+        A dinner club for people building things—projects, careers, habits, worlds.
+      </p>
     </header>
 
-    <!-- Manifesto -->
-    <main class="space-y-12">
-      <section class="bg-gray-800 rounded-2xl p-8 sm:p-12 donut-shadow">
-        <div class="prose prose-xl prose-invert max-w-none space-y-6 text-gray-200 leading-relaxed">
-          <p class="text-2xl text-white font-medium">
-            Most of the systems we live with weren't built to be fair or humane. They were built to scale—and left to sort themselves out later. We're living in the later.
-          </p>
-
-          <p>
-            Evening Build is for people who care about how things get made and who they leave behind. Designers, engineers, ops folks, API tinkerers—and anyone affected by broken systems, online or off.
-          </p>
-
-          <p>
-            Whether you're troubleshooting access for a neighbor or wondering why your bus never comes, you're not imagining it. Much of it really is broken.
-          </p>
-
-          <p>
-            If you're curious about what care looks like after the hype, you're in the right place.
-          </p>
-        </div>
-      </section>
-
-      <!-- What Evening Build Presents -->
-      <section class="grid md:grid-cols-2 gap-8">
-        <div class="bg-deep-purple bg-opacity-20 border border-deep-purple rounded-xl p-6">
-          <h3 class="text-xl font-bold text-deep-purple mb-3">Pop-up Experiments</h3>
-          <p class="text-gray-300">
-            One-offs, pilots, and good ideas that only need to work once to matter.
-          </p>
-        </div>
-
-        <div class="bg-bright-yellow bg-opacity-20 border border-bright-yellow rounded-xl p-6">
-          <h3 class="text-xl font-bold text-bright-yellow mb-3">Curated Conversations</h3>
-          <p class="text-gray-300">
-            Prompt-led dialogue. Tangents welcome. Depth encouraged.
-          </p>
-        </div>
-
-        <div class="bg-hot-pink bg-opacity-20 border border-hot-pink rounded-xl p-6">
-          <h3 class="text-xl font-bold text-hot-pink mb-3">What You Want to Do</h3>
-          <p class="text-gray-300">
-            Book nights. Weird lectures. Collaborations that don’t feel like work.
-          </p>
-        </div>
-
-        <div class="bg-electric-blue bg-opacity-20 border border-electric-blue rounded-xl p-6">
-          <h3 class="text-xl font-bold text-electric-blue mb-3">Gatherings That Stick</h3>
-          <p class="text-gray-300">
-            Supper clubs, salons, shared tables. Something to come back to.
-          </p>
-        </div>
-      </section>
-
-      <!-- Call to Action -->
-      <section class="text-center bg-gradient-to-r from-deep-purple to-hot-pink rounded-2xl p-12">
-        <h2 class="text-4xl font-bold mb-6">Want to be part of the first one?</h2>
-        <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-          We’re starting with a small gathering in Portland—food, conversation, maybe even music. You’ll know when we know.
+    <main class="main-content">
+      <!-- Main Description -->
+      <sl-card class="description-card">
+        <p class="description-text">
+          We gather every so often to share food and conversation with others who are in the middle of something, figuring something out, or quietly shaping something new.
         </p>
-        <a href="mailto:hello@eveningbuild.com" class="inline-block bg-bright-yellow text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-colors">
-          Get Updates
-        </a>
+        <p class="description-text">
+          It's not a show-and-tell, and it's not a networking thing. It's a place to practice being around other people who care.
+        </p>
+        <p class="description-text">
+          Come with something you've been chewing on—literal or metaphorical.
+        </p>
+      </sl-card>
+
+      <!-- Next Dinner -->
+      <sl-card class="dinner-card">
+        <div class="dinner-content">
+          <div class="candle">🕯️</div>
+          <h2 class="dinner-title">Next Dinner</h2>
+          <sl-card class="dinner-details">
+            <div class="status">Coming Soon</div>
+            <div class="location">Portland, OR</div>
+            <div class="date">Date & details TBA</div>
+          </sl-card>
+          <p class="dinner-description">
+            Tickets are for two people—bring someone whose company you enjoy, or come ready to meet others who are building something meaningful.
+          </p>
+        </div>
+      </sl-card>
+
+      <!-- Contact -->
+      <section class="contact-section">
+        <h2 class="contact-title">Get Updates</h2>
+        <p class="contact-description">
+          We'll let you know when the next dinner is happening and how to get a seat at the table.
+        </p>
+        <sl-button variant="primary" size="large" href="mailto:hello@eveningbuild.com" class="contact-button">
+          hello@eveningbuild.com
+        </sl-button>
       </section>
 
-      <!-- Footer Note -->
-      <section class="text-center text-gray-400 text-lg">
-        <p>
-          Portland, OR • An experiment in building something worth showing up for
-        </p>
-      </section>
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-location">Portland, OR</p>
+        <p class="footer-tagline">For people who care about what they're building</p>
+      </footer>
     </main>
   </div>
 
-  <div class="gradient-bg h-4 mt-16"></div>
+  <script src="script.js"></script>
 </body>
 </html>
