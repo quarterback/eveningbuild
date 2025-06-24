@@ -3,38 +3,209 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Evening Build is a dinner club for people building things—projects, careers, habits, worlds. It’s a space for meaningful conversation, shared meals, and thoughtful company." />
   <title>Evening Build</title>
-  
+
   <!-- Shoelace CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" />
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
+
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --warm-orange: #f97316;
+      --deep-red: #dc2626;
+      --golden: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .header {
+      padding-bottom: 2rem;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: Georgia, serif;
+      background: linear-gradient(45deg, var(--warm-orange), var(--deep-red), var(--golden));
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: warmShift 8s ease infinite;
+      margin: 0 0 0.5rem;
+    }
+
+    @keyframes warmShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    sl-card::part(base) {
+      padding: 1.75rem;
+      border-radius: 1rem;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .description-text {
+      font-size: 1.125rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .description-text.strong {
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .event-card::part(base) {
+      background: linear-gradient(135deg, var(--warm-orange), var(--deep-red));
+      color: white;
+    }
+
+    .event-content {
+      text-align: center;
+    }
+
+    .event-title {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: Georgia, serif;
+      margin-bottom: 1rem;
+    }
+
+    .event-details::part(base) {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin: 0 auto 1rem;
+      max-width: 300px;
+    }
+
+    .status {
+      color: var(--golden);
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .location, .date {
+      opacity: 0.85;
+    }
+
+    .date {
+      font-size: 0.875rem;
+      opacity: 0.75;
+    }
+
+    .contact-section {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .contact-description {
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+    }
+
+    sl-button::part(base) {
+      background-color: var(--warm-orange);
+      color: white;
+      font-weight: 600;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.25rem;
+      }
+
+      .description-text {
+        font-size: 1rem;
+      }
+
+      .event-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
   <!-- Shoelace JS -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
 </head>
+<body>
+  <div class="container">
     <!-- Header -->
     <header class="header">
       <h1 class="title">Evening Build</h1>
-      <p class="subtitle">
-        A supper club for people who want to meet other people.
-      </p>
+      <p class="subtitle">A supper club for people who want to meet other people.</p>
     </header>
 
     <main class="main-content">
       <!-- Main Description -->
       <sl-card class="description-card">
         <p class="description-text">
-          While we're designed for people who build, maintain, and care about the world around them regardless of your job. There's so much networking right now. Tech events care about building, scaling, "the next big thing" and not so much "that big thing we built yesterday that everyone is neglecting." That's where we come in. And maybe that's you, too.
+          While we're designed for people who build, maintain, and care about the world around them, we welcome anyone—regardless of job title. There's so much networking right now. Tech events care about building, scaling, "the next big thing" and not so much "that big thing we built yesterday that everyone is neglecting." That's where we come in. And maybe that's you, too.
         </p>
         <p class="description-text">
           Perhaps you have questions, maybe some answers. It won't be all talk and no play. The food will be good and maybe you'll make a friend. The vibes will be good.
         </p>
-        <p class="description-text strong">
-          Build with us.
+        <p class="description-text strong">Build with us.</p>
+      </sl-card>
+
+      <!-- Who This Is For -->
+      <sl-card class="audience-card">
+        <p class="description-text">
+          Evening Build is for people who work in and around tech and want to think more clearly about what we're doing. Designers, engineers, PMs, ops people, data folks, API tinkerers. People who care about how things get made and who they leave behind.
         </p>
+        <p class="description-text">
+          It's also for anyone outside that bubble who still feels the impact. Whether you're trying to fix a login form for your neighbor or wondering why your bus never shows up on time, you're not imagining it. A lot of this stuff really is broken.
+        </p>
+        <p class="description-text">Every ticket lets you bring a plus one, too.</p>
       </sl-card>
 
       <!-- Next Event -->
@@ -66,7 +237,5 @@
       </footer>
     </main>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
